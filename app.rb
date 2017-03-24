@@ -9,7 +9,6 @@ get('/') do
 end
 
 get('/display') do
-binding.pry
-  @result=param.fetch('passage').count(param.fetch('word'))
+  @result=params.fetch('passage').count(params.fetch('word'))
   erb(:index)
 end

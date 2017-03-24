@@ -10,7 +10,6 @@ class String
         if check_word_length > input_string_length
             return 0
         end  #if
-
         until input_string=="" do
             if check_word == input_string.slice(0, check_word_length)
                 word_count+=1

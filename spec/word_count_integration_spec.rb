@@ -7,20 +7,20 @@ require('capybara/rspec')
     # it('processes the user entries and returns results') do
     #   visit('/')
     #   # find(:select, from, options).find(:option, value, options).select_option
-    #   # find('p1').find('rock').select_option
-    #   # fill_in('p1', :with => 'rock')
-    #   # click_button('Send')
-    #   click_button('Go!')
-    #   expect(page).to have_content('Ties')
+    #   # find('option').find('Case Sensitive Any').select_option
+    #   # fill_in('passage', :with => 'The big brown fox jumps over the lazy dog.')
+    #   # fill_in('word', :with => 'big')
+    #   # click_button('Submit')
+    #   expect(page).to have_content('1')
     # end
   #   it('processes the user entries and returns results') do
   #     visit('/')
   #     # find(:select, from, options).find(:option, value, options).select_option
-  #     # find('Player 1').find('paper').select_option
-  #     # fill_in('p1', :with => 'rock')
-  #     # click_button('Send')
-  #     click_button('Play with computer')
-  #     expect(page).to have_content('Random')
+  #     # find('option').find('Case Sensitive Word Only').select_option
+  #     # fill_in('passage', :with => 'The big brown fox jumps over the lazy dog.')
+  #     # fill_in('word', :with => 'b')
+  #     # click_button('Submit')
+  #     expect(page).to have_content('0')
   #   end
 
   end

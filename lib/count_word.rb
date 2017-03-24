@@ -3,13 +3,13 @@ require('pry')
 class String
 
     define_method(:allcount) do |arg1, arg2|
-        if arg2 == "count"
+        if arg2 == "Case Sensitive Any"
             self.count(arg1)
-        elsif arg2 == "count_fw"
+        elsif arg2 == "Case Sensitive Word Only"
             self.count_fw(arg1)
-        elsif arg2 == "count_noncase"
+        elsif arg2 == "Case Non-sensitive Any"
             self.count_noncase(arg1)
-        elsif arg2 == "count_noncase_fw"
+        elsif arg2 == "Case Non-sensitive Word"
             self.count_noncase_fw(arg1)
         end  #if
     end #method

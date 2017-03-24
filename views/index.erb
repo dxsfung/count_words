@@ -1,34 +1,51 @@
 <div>
-    <h2>Word Count Within A Passage
-    </h2>
-    <h3>This website will return how frequently a word appears in a given string.</h3>
+    <h3>Word Count Within A Passage
+    </h3>
+    <h4>This website will return how frequently a word appears in a given string.</h4>
 
 </div>
 
 <form action='/display'>
     <div class="form-group">
-        <h3>Please enter the passage you would like to check below
-        </h3>
+        <h4>Please enter the passage you would like to check below
+        </h4>
         <label for="passage">Passage</label>
-        <input id="passage" name="passage" class="form-control" type="text">
+        <textarea
+            placeholder="Start typing, or copy and paste your document here..."
+            id="passage"
+            name="passage"
+            class="form-control table-data finalResult textarea_revision processed"
+            type="text"
+            style="resize: none; overflow: hidden; height: 200px; min-height: 150px; font-family: Arial;"></textarea>
     </div>
     <div class="form-group">
-        <h3>Please enter the word you would like to check below
-        </h3>
+        <h4>Please enter the word you would like to check below
+        </h4>
         <label for="word">Word</label>
         <input id="word" name="word" class="form-control" type="text">
     </div>
     <select name="option" id="option">
-        <option value="count">Case Sensitive Any</option>
-        <option value="count_fw">Case Sensitive Word Only</option>
-        <option value="count_noncase">Case Non-sensitive Any</option>
-        <option value="count_noncase_fw">Case Non-sensitive Word</option>
+        <option value="Case Sensitive Any">Case Sensitive Any</option>
+        <option value="Case Sensitive Word Only">Case Sensitive Word Only</option>
+        <option value="Case Non-sensitive Any">Case Non-sensitive Any</option>
+        <option value="Case Non-sensitive Word">Case Non-sensitive Word</option>
     </select>
     <button class="btn btn-info" type="submit" class="btn">Submit</button>
 </form>
 
 <div>
-    <h3>Total Word Counts:
-        <%=@result%>
-    </h3>
+    <h3 style="color:#0000AF">Total Word Count:
+        <%=@result%></h3>
+    <h6>Search mode selected:
+        <span style="color:grey"><%=@option%></span>
+    </h6>
+    <%if defined? @passage%>
+    <h6>The original passage for checking:</h6>
+    <h6 style="color:grey"><%=@passage%></h6>
+    <%end%>
+    <%if defined? @word%>
+    <h6>The original word for checking:</h6>
+    <h6 style="color:grey"><%=@word%></h6>
+    <%end%>
+</h3>
 </div>

@@ -1,6 +1,20 @@
 require('pry')
 
 class String
+
+    define_method(:topcount) do |arg1, arg2|
+        if arg2 == "count"
+            self.count(arg1)
+        elsif arg2 == "count_fw"
+            self.count_fw(arg1)
+        elsif arg2 == "count_noncase"
+            self.count_noncase(arg1)
+        elsif arg2 == "count_noncase_fw"
+            self.count_noncase_fw(arg1)
+        end
+    end #method
+
+
     define_method(:count) do |argument|
         word_count=0
         check_word=argument

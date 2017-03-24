@@ -9,21 +9,26 @@
     <div class="form-group">
         <h3>Please enter the passage you would like to check below
         </h3>
-
         <label for="passage">Passage</label>
         <input id="passage" name="passage" class="form-control" type="text">
-
     </div>
     <div class="form-group">
         <h3>Please enter the word you would like to check below
         </h3>
-
         <label for="word">Word</label>
         <input id="word" name="word" class="form-control" type="text">
     </div>
+    <select name="option" id="option">
+        <option value="count">Case Sensitive Any</option>
+        <option value="count_fw">Case Sensitive Word Only</option>
+        <option value="count_noncase">Case Non-sensitive Any</option>
+        <option value="count_noncase_fw">Case Non-sensitive Word</option>
+    </select>
     <button class="btn btn-info" type="submit" class="btn">Submit</button>
 </form>
 
 <div>
-    <h3>Total Word Counts: <%=@result%> </h3>
+    <h3>Total Word Counts:
+        <%=@result%>
+    </h3>
 </div>

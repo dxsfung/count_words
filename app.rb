@@ -5,10 +5,11 @@ also_reload('lib/**/*.rb')
 require('pry')
 
 get('/') do
-  erb(:index)
+    erb(:index)
 end
 
 get('/display') do
-  @result=params.fetch('passage').count(params.fetch('word'))
-  erb(:index)
+    # @result=params.fetch('passage').topcount(params.fetch('word', params.fetch('option')))
+    @result=params.fetch('passage').count(params.fetch('word'))
+    erb(:index)
 end

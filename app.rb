@@ -10,6 +10,7 @@ end
 
 get('/display') do
     # @result=params.fetch('passage').topcount(params.fetch('word', params.fetch('option')))
-    @result=params.fetch('passage').count(params.fetch('word'))
+    @result=params.fetch('passage').allcount(params.fetch('word'), params.fetch('option'))
+
     erb(:index)
 end

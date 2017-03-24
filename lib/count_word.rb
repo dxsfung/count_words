@@ -2,7 +2,7 @@ require('pry')
 
 class String
 
-    define_method(:topcount) do |arg1, arg2|
+    define_method(:allcount) do |arg1, arg2|
         if arg2 == "count"
             self.count(arg1)
         elsif arg2 == "count_fw"
@@ -11,7 +11,7 @@ class String
             self.count_noncase(arg1)
         elsif arg2 == "count_noncase_fw"
             self.count_noncase_fw(arg1)
-        end
+        end  #if
     end #method
 
 

@@ -35,18 +35,18 @@
 
 <div>
     <%if defined? @word%>
-    <h3 style="color:#0000AF">Total <strong style="color:red"><%=@word%></strong> Counted:
+    <h3 style="color:#0000AF">Total "<strong style="color:red"><%=@word%></strong>" Counted:
         <%=@result%></h3>
     <h6>Search mode selected:
-        <span style="color:grey"><%=@option%></span>
+        <span style="color:#0000AF"><%=@option%></span>
     </h6>
     <%if defined? @passage%>
     <h6>The original passage for checking:</h6>
-    <h6 style="color:grey"><%=@passage%></h6>
+    <h6 style="color:#0000AF"><%=@passage%></h6>
     <%end%>
 
     <h6>The original word for checking:</h6>
-    <h6 style="color:grey"><%=@word%></h6>
+    <h6 style="color:red"><%=@word%></h6>
 
     <%end%>
 </div>

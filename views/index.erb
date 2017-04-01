@@ -25,16 +25,17 @@
         <input id="word" name="word" class="form-control" type="text">
     </div>
     <select name="option" id="option">
-        <option value="Case Sensitive Any">Case Sensitive Any</option>
+        <option value="Case Sensitive Any - including partial words">Case Sensitive Any</option>
         <option value="Case Sensitive Word Only">Case Sensitive Word Only</option>
-        <option value="Case Non-sensitive Any">Case Non-sensitive Any</option>
+        <option value="Case Non-sensitive Any - including partial words">Case Non-sensitive Any</option>
         <option value="Case Non-sensitive Word">Case Non-sensitive Word</option>
     </select>
     <button class="btn btn-info" type="submit" class="btn">Submit</button>
 </form>
 
 <div>
-    <h3 style="color:#0000AF">Total Word Count:
+    <%if defined? @word%>
+    <h3 style="color:#0000AF">Total <strong style="color:red"><%=@word%></strong> Counted:
         <%=@result%></h3>
     <h6>Search mode selected:
         <span style="color:grey"><%=@option%></span>
@@ -43,9 +44,9 @@
     <h6>The original passage for checking:</h6>
     <h6 style="color:grey"><%=@passage%></h6>
     <%end%>
-    <%if defined? @word%>
+
     <h6>The original word for checking:</h6>
     <h6 style="color:grey"><%=@word%></h6>
+
     <%end%>
-</h3>
 </div>

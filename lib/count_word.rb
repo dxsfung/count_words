@@ -17,18 +17,8 @@ class String
 
     define_method(:count) do |argument|
         word_count=0
-        check_word=argument
-        check_word_length=check_word.length
         input_string=self.clone
-        input_string_length = input_string.length
-        until input_string=="" do
-            if check_word == input_string.slice(0, check_word_length)
-                word_count+=1
-                input_string.slice!(0, check_word_length)
-            else
-                input_string.slice!(0)
-            end  #if
-        end  #until
+        word_count=input_string.scan(argument).length
         return word_count
     end #method
 
@@ -46,18 +36,8 @@ class String
     define_method(:count_noncase) do |argument|
         word_count=0
         check_word=argument.upcase
-        check_word_length=check_word.length()
         input_string=self.clone.upcase
-        input_string_length = input_string.length()
-
-        until input_string=="" do
-            if check_word == input_string.slice(0, check_word_length)
-                word_count+=1
-                input_string.slice!(0)
-            else
-                input_string.slice!(0)
-            end  #if
-        end  #until
+        word_count=input_string.scan(check_word).length
         return word_count
     end #method
 
